@@ -1,10 +1,10 @@
 # Site settings
-title: 
+title: Hello world!
 header-img: img/home-bg.png
 email: kriti.rai@gmail.com
 copyright_name: kriti-rai
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Beginning of the journey
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  kriti-rai
