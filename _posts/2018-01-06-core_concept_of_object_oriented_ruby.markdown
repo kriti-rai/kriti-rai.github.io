@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Core Concept of Object Oriented Ruby"
-date:       2018-01-06 06:44:20 +0000
+date:       2018-01-06 01:44:21 -0500
 permalink:  core_concept_of_object_oriented_ruby
 ---
 
