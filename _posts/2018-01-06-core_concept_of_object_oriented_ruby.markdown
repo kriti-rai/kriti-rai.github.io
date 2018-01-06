@@ -45,6 +45,8 @@ shiba.name
 
 shiba.name="Tommy"
 =>#<Dog:0x00559687c8bc98 @name="Tommy">
+```
+
 
 The second line of the example above shows that a new dog named "Shiba" has been created. We can then ask the object for its name and it returns "Shiba", just like in real life. Pretty cool! This demonstrates how information are stored in objects and we have methods that when called the objects disclose the information. However, not all information stored in an object are publicly accessible or can be written over. In the above example, name has both attribute reader(*#name*) and attribute writer (*#name=*). Hence, we can call #name on *shiba* and ask for its name and through #name= change its name to "Tommy" later. However, say we have a method for the dog's breed, then what? By common sense, one can not change the dog's breed.  In that case, breed would just have an attribute reader,* #breed*, but not #breed= to change the breed. Similarly, say you have a secret password coded inside Shiba that allows him to let you iniside the house. Then, we don't want a home intruder to just be able to ask Shiba for the password and chane it or get into your house. In that case, the attribute would just have an attribute writer method.
 
