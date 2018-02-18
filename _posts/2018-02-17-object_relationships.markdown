@@ -1,13 +1,13 @@
 ---
 layout: post
 title:      "Object relationships"
-date:       2018-02-18 04:36:00 +0000
+date:       2018-02-17 23:36:00 -0500
 permalink:  object_relationships
 ---
 
 I recently finished the chapter on object relationships in Ruby, a very important concept in understanding Object Oriented Programming in my opinion. In my previous post, I talked about creating objects, classifying them and assigning them attributes and methods to make them behave certain ways. But apparently, that was just a tip of the iceberg and it took me a couple of labs and frustrating nights to wrap my head around the concept of object relationships. I am not saying I have excelled in understanding the concept, but here is what I have understood so far.
 
-Let's start by revisiting the ubiquitous quote in Ruby-land -- *"everything in Ruby is an object"*. These objects possess attributes and methods that make them behave in certain ways. Shovelling in an instance of a class into an array is not the same as shovelling in the name of that instance. Likewise, these objects can also talk to each other and have relationships with one another objects. Whaaa......?
+Let's start by revisiting the ubiquitous quote in Ruby-land -- *"everything in Ruby is an object"*. These objects possess attributes and methods that make them behave in certain ways. Shovelling in an instance of a class into an array is not the same as shovelling in the name of that instance. Likewise, these objects can also talk to each other and have relationships with one another. Whaaa......?
 
 **1. Has many**
 
@@ -25,27 +25,26 @@ end
 ```
 Then later with a little help of other methods and adjustments we can simply ask the artist for its songs.
 ```
-bonobo = Artist.new("Bonobo)
+bonobo = Artist.new("Bonobo")
 bonobo.songs  #=> gives an array of Bonobo's songs.
 ```
 
 
 **2. Belongs to**
 
-Now, an artists has many songs but a song can belong to only one artist (given that we are talking about single-artist songs). Let's give Song an *:artist* attribute to establish the belongs-to relationship.
+Now, an artists has many songs but a song can belong to only one artist (given that we are talking about single-artist songs). So to establish that belongs-to relationship we give Song an *:artist* attribute.
 
 ```
 class Song
     attr_accessor :name, :artist
- 
     def initialize(name)
 	    @name = name
-		  @artist = artist
+			@artist = artist
 	end
 		
 end
 ```
-Like for artists, we would also be able to ask an instance of song for its artist. Again we will need some helper methods  but ideally we would be able to ask a song for its artist as follows:
+Like for artists, we would also be able to ask an instance of Song for its artist. Again, we will need some helper methods  but we would be able to ask a song for its artist as follows:
 ```
 song.artist  #=> returns an artist with all the attached attributes
 ```
@@ -60,7 +59,7 @@ class Genre
 
   def initialize(name)
     @name = name
-	  @artists = []
+		@artists = []
 		@songs = []
   end
 	
