@@ -33,12 +33,14 @@ Now, if we run the file in the terminal, with the help of *pry* we will notice t
 **Insert CSS!! **
 
 CSS stands for *Cascading Style Sheet*. It has a whole bunch of selectors that wraps XML/HTML elements  in order to style them. So, with these selectors we could grab the elements we want from the page. Sweet! This part does require some knowledge of CSS. So given you have that, you can hover the cursor around the webpage while you are in the "inspecting" mode, to figure out the selectors you are interested in. Listed below are the selectors for the components we are interested in, like the song-title, its artist and the rank.
+
 ```
 song_title: doc.css(".chart-row").first.css("h2").text
 artist: doc.css(".chart-row").first.css(".chart-row__artist").text.strip
-rank: doc.css(".chart-row").first.css(".chart-row__rank span.chart-row__current-week").text```
-
+rank: doc.css(".chart-row").first.css(".chart-row__rank span.chart-row__current-week").text
+```
 This is not all of the code, so let's save this info somewhere to use it later. Heading back to our code file in *Scraper* class, let's create a few methods for each task we want the class to do -- initialize with a parsed XML/HTML (#initialize), get the song titles from the parsed doc (#get_songs), get the artists of the respective songs (#get_artists) and the songs' rankings (#get_ranks). And, this is where we will use the info we saved above.
+
 ```
 class Scraper
   attr_accessor :doc
@@ -53,8 +55,7 @@ class Scraper
   end
   def get_ranks
     @doc.css(".chart-row").css(".chart-row__rank span.chart-row__current-week").map {|rank| rank.text}
-  end
-	
+  end	
   scraper = Scraper.new
   songs = scraper.get_songs
   artists = scraper.get_artists
@@ -67,6 +68,7 @@ class Scraper
 end
 ```
 As you notice, we used the array#map method to iterate over the array returned by the parser. Then, at the end, we simply created a new Scraper instance and assigned attributes to the instance to puts the intended data. Below is the output:
+
 ```
 // ♥ ruby scraper.rb
 THE BILLBOARD'S TOP 100 SONGS
@@ -272,6 +274,7 @@ IDGAF by Dua Lipa
 REWRITE THE STARS by Zac Efron & Zendaya
 [18:14:56] temporary
 // ♥
+
 ```
 
 **WE DID IT!!**
