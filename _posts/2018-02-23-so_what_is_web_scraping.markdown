@@ -9,9 +9,9 @@ Just finished a chapter on web scraping and boy, was I lost...until I sat down t
 
 So I decided to follow the advice, take a moment, breathe, and jot down what I have understood. After rummaging through a couple of online sources and referencing back to the code-along lab in Learn, I sat down to implement the idea of data scraping to extract the list of top 100 songs from the [Billboard](https://www.billboard.com/charts/hot-100). So, bear with me as I walk you through my lengthy code-along.
 
-But first, let's go over what the fuss is all about. Web scraping is a technique of extracting selective data out of the XML/HTMLthat makes up a webpage so you can use it in your program. If you've seen a page's HTML which you can simply do by right-clicking on the page and clicking on *page inspect* or *view page source*, you know that it has a whole lot of information and might even look gibberish to untrained eyes. So to make sense of the gibberish and extract the information we are interested in is a meticulous task. So why go through all that pain? Well, in some case there might not be an API or RSS feed readily available from the intended website, making web scraping worth the pain.
+But first, let's go over what the fuss is all about. Web scraping is a technique of extracting selective data out of the XML/HTML that makes up a webpage so you can use it in your program. If you've seen a page's HTML which you can simply do by right-clicking on the page and clicking on *page inspect* or *view page source*, you know that it has a whole lot of information and might even look gibberish to untrained eyes. To make sense of the gibberish and extract the information we are interested in is a meticulous task. So why go through all that pain? Well, you might be interested in some information from a webpage but it does not provide an API or RSS feed, making web scraping worth the pain.
 
-So, let's start! There sure are different ways to do this but the method I use here references the one shown in codealong lab in Learn.  We are going to use a couple of Ruby gems -- Open-uri and Nokogiri to help us with scraping. Per [RubyDoc](http://ruby-doc.org/stdlib-2.1.3/libdoc/open-uri/rdoc/OpenURI.html), *open-URI*  is an easy-to-use wrapper for Net::HTTP, Net::HTTPS and Net::FTP, whereas *Nokogiri* is an HTML, XML, SAX, and Reader parser. In other words, *Nokogiri* helps with scraping and parsing the HTML we imported using open-uri. *Open-uri* is a pretty standard gem and should already be available in Ruby. We can install *Nokogiri* with the following command in the terminal.
+So, let's start! Sure, there are different ways to do this but the method I use here references the one shown in codealong lab in Learn.  We are going to use a couple of Ruby gems -- *Open-uri* and *Nokogiri* to help us with scraping. Per [RubyDoc](http://ruby-doc.org/stdlib-2.1.3/libdoc/open-uri/rdoc/OpenURI.html), *open-URI*  is an easy-to-use wrapper for Net::HTTP, Net::HTTPS and Net::FTP, whereas *Nokogiri* is an HTML, XML, SAX, and Reader parser. In other words, *Nokogiri* helps with scraping and parsing the HTML we import using *Open-uri*. *Open-uri* is a pretty standard gem and should already be available in Ruby. We can, however, install *Nokogiri* with the following command line in the terminal.
 
 ```
 gem install nokogiri
@@ -39,7 +39,7 @@ song_title: doc.css(".chart-row").first.css("h2").text
 artist: doc.css(".chart-row").first.css(".chart-row__artist").text.strip
 rank: doc.css(".chart-row").first.css(".chart-row__rank span.chart-row__current-week").text
 ```
-This is not all of the code, so let's save this info somewhere to use it later. Heading back to our code file in *Scraper* class, let's create a few methods for each task we want the class to do -- initialize with a parsed XML/HTML (#initialize), get the song titles from the parsed doc (#get_songs), get the artists of the respective songs (#get_artists) and the songs' rankings (#get_ranks). And, this is where we will use the info we saved above.
+This is not all of the code, but we will use it later so let's save it somewhere or simply comment it out. Heading back to our code file in *Scraper* class, let's create a few methods for each task we want the class to do -- initialize with a parsed XML/HTML (#initialize), get the song titles from the parsed doc (#get_songs), get the artists of the respective songs (#get_artists) and the songs' rankings (#get_ranks). And, this is where we will use the info we saved above.
 
 ```
 class Scraper
@@ -67,7 +67,7 @@ class Scraper
   end
 end
 ```
-As you notice, we used the array#map method to iterate over the array returned by the parser. Then, at the end, we simply created a new Scraper instance and assigned attributes to the instance to puts the intended data. Below is the output:
+As you notice, we used the array#map method to iterate over the array returned by the parser to grab a value. Then, at the end, we simply created a new Scraper instance and assigned attributes to the instance to puts the intended data. Below is the output:
 
 ```
 // ♥ ruby scraper.rb
