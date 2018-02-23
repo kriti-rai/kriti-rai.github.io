@@ -31,7 +31,6 @@ end
 Now, if we run the file in the terminal, with the help of *pry* we will notice that *doc* equals to a bunch of data but if we look into it close enough we will notice that the data contains songs, artist and ranks and such -- the stuff we are interested in, and are wrapped up inside an array. So, how do we grab the elements? What is that one thing that goes hand-in-hand with XML/HTML to style elements.... that has selectors? 
 
 **Insert CSS!! **
-![kitteh](http://https://i.amz.mshcdn.com/zfbtNnT8tkXGjD_5lxks1VyeIP8=/fit-in/1200x9600/http%3A%2F%2Fmashable.com%2Fwp-content%2Fuploads%2F2012%2F10%2FCat-Shades.png)
 
 CSS stands for *Cascading Style Sheet*. It has a whole bunch of selectors that wraps XML/HTML elements  in order to style them. So, with these selectors we could grab the elements we want from the page. Sweet! This part does require some knowledge of CSS. So given you have that, you can hover the cursor around the webpage while you are in the "inspecting" mode, to figure out the selectors you are interested in. Listed below are the selectors for the components we are interested in, like the song-title, its artist and the rank.
 ```
