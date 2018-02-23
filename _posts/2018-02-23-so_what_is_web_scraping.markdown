@@ -5,9 +5,7 @@ date:       2018-02-23 15:36:36 -0500
 permalink:  so_what_is_web_scraping
 ---
 
-Just finished a chapter on web scraping and boy, was I lost...until I sat down to blog about it. So to agree with Avi (from the video review towards the end of OO), "stop plowing through the lessons". Instead, take a step back, revise, re-do the lab, ponder on it for a while. Avi also quotes one of those famous quotes about time:
-
-![self-help](http://https://imgur.com/gallery/WShv9Wi)
+Just finished a chapter on web scraping and boy, was I lost...until I sat down to blog about it. So to agree with Avi (from the video review towards the end of OO), "stop plowing through the lessons". Instead, take a step back, revise, re-do the lab, ponder on it for a while. 
 
 So I decided to follow the advice, take a moment, breathe, and jot down what I have understood. After rummaging through a couple of online sources and referencing back to the codealong lab in Learn, I sat down to implement the idea of data scraping to extract the list of top 100 songs from [Billboard's top 100](http://https://www.billboard.com/charts/hot-100). So, bear with me as I walk you through my lengthy code along.
 
