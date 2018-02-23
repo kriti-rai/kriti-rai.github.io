@@ -1,12 +1,9 @@
 ---
 layout: post
 title:      "So what is Web scraping?"
-date:       2018-02-23 20:36:35 +0000
+date:       2018-02-23 15:36:36 -0500
 permalink:  so_what_is_web_scraping
 ---
-
-
-![computer-kitty](http://https://cdn-images-1.medium.com/max/800/1*J7uozbOFdRZqKaM9rd8qSA.gif)
 
 Just finished a chapter on web scraping and boy, was I lost...until I sat down to blog about it. So to agree with Avi (from the video review towards the end of OO), "stop plowing through the lessons". Instead, take a step back, revise, re-do the lab, ponder on it for a while. Avi also quotes one of those famous quotes about time:
 
