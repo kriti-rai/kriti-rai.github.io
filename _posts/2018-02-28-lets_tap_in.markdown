@@ -1,12 +1,14 @@
 ---
 layout: post
 title:      "Let's tap in!"
-date:       2018-03-01 00:16:40 +0000
+date:       2018-02-28 19:16:41 -0500
 permalink:  lets_tap_in
 ---
 
 
-Just got done with my Music Library CLI project. After submitting my code, I went onto see how other students had solved the lab. I always try to see what many different ways something can be done. And, after checking out a few of the students' work, I saw that a couple of them had used  ```tap```. I got intrigued as the method seemed to make the code shorter and more elegant. So I ended up doing a little research. Let's tap in (sorry for the cheesy pun but I had to do it)!!
+Just got done with my Music Library CLI project. After submitting my code, I went onto see how other students had solved the lab. I always try to see what many different ways something can be done. And, after checking out a few of the students' work, I saw that a couple of them had used  ```tap```. I got intrigued as the method seemed to make the code shorter and more elegant. So, I ended up doing a little research. 
+
+Let's tap in (sorry for the cheesy pun but I had to do it)!!
 
 ![tap_clipart](http://www.clker.com/cliparts/1/o/n/b/h/j/sun-faucet-md.png)
 
@@ -14,7 +16,7 @@ Just got done with my Music Library CLI project. After submitting my code, I wen
 
 **What does it do?**
 
-The ```tap``` method yields the object to a block and returns the object itself .In Ruby, it is coded as follows: 
+The ```tap``` method yields the object to a block and returns the object itself. In Ruby, it is coded as follows: 
 ```
 class Object
   def tap
@@ -29,11 +31,11 @@ end
 
 Per [Ruby Doc](https://ruby-doc.org/core-2.5.0/Object.html#method-i-tap), the primary purpose of the ```tap``` method is to "tap into" a method chain, in order to perform operations on intermediate results within the chain. Let's look at the example Ruby Doc provides:
 
-Say you have a line of code like this. With methods chained like this, it is easy to have a bug and now you need to debug the code.
+Say you have a line of code like this: 
 ``` 
 (1..10).to_a.select {|x| x.even? }.map {|x| x*x }
 ```
-You can use `pry` but that is repetitive and tedious (and we are lazy). So, let's look at how we can use `tap` to debug it.
+With methods chained like this, it is easy to have a bug and now you need to debug the code. You can use `pry` but that is repetitive and tedious (and we are lazy). So, let's look at how we can use `tap` to debug it.
 ```
 (1..10).tap {|x| puts "original: #{x}" }    #=>original: 1..10
   .to_a.tap {|x| puts "array:    #{x}" }    #=>array:    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
