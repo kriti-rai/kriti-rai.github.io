@@ -6,9 +6,7 @@ permalink:  lets_tap_in
 ---
 
 
-Just got done with my Music Library CLI project. After submitting my code, I went onto see how other students had solved the lab. I always try to see what many different ways something can be done. And, after checking out a few of the students' work, I saw that a couple of them had used  ```tap```. I got intrigued as the method seemed to make the code shorter and more elegant. So, I ended up doing a little research. 
-
-Let's tap in (sorry for the cheesy pun but I had to do it)!!
+Sorry for the cheesy pun but I am sure it has crossed your mind too (if not, o well..). Anyways, I just got done with my Music Library CLI project. After submitting my code, I went onto see how other students had solved the lab. I always try to see what many different ways something can be done. And, after checking out a few of the students' work, I saw that a couple of them had used  ```tap```. I got intrigued as the method seemed to make the code shorter and more elegant. So, I ended up doing a little research. 
 
 ![tap_clipart](http://www.clker.com/cliparts/1/o/n/b/h/j/sun-faucet-md.png)
 
@@ -38,9 +36,9 @@ Say you have a line of code like this:
 With methods chained like this, it is easy to have a bug and now you need to debug the code. You can use `pry` but that is repetitive and tedious (and we are lazy). So, let's look at how we can use `tap` to debug it.
 ```
 (1..10).tap {|x| puts "original: #{x}" }    #=>original: 1..10
-  .to_a.tap {|x| puts "array:    #{x}" }    #=>array:    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  .select {|x| x.even? } .tap {|x| puts "evens:    #{x}" }    #=>evens:    [2, 4, 6, 8, 10]
-  .map {|x| x*x } .tap {|x| puts "squares:  #{x}" }    #=>squares:  [4, 16, 36, 64, 100]
+  .to_a.tap {|x| puts "array: #{x}" }    #=>array:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  .select {|x| x.even? } .tap {|x| puts "evens:#{x}" }    #=>evens:[2, 4, 6, 8, 10]
+  .map {|x| x*x } .tap {|x| puts "squares:#{x}" }    #=>squares:[4, 16, 36, 64, 100]
 	
 => [4, 16, 36, 64, 100]   #return
 ```
