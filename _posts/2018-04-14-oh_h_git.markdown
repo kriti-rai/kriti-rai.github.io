@@ -1,0 +1,125 @@
+---
+layout: post
+title:      "Oh $h*%, Git!"
+date:       2018-04-14 22:28:47 +0000
+permalink:  oh_h_git
+---
+
+
+This was my initial thought when I realized that I will be using git and not Learn commands for my first portfolio project. This is also the [website](http://ohshitgit.com)’s domain name that I heavily relied on alongside this [website](http://rogerdudler.github.io/git-guide/)  to figure out git.
+
+So as mentioned, I am currently on my first ever portfolio project - CLI Gem Project, getting closer to wrapping it up and submitting. As blogging is one of the requirements for the project, I was stashing away sidenotes on the  hurdles I came across during the project and the first ones were on Git.
+
+After overcoming the intimidation of starting my own project from scratch, I finally had my environment set up and was ready to code. After typing a few lines of code I was almost instantly hit with an obstacle - GIT!!! I was so dependent on the convenient Learn commands that I had avoided trying to properly understand git. I started by revisiting the lessons on git in Learn. Revising through the chapter, I came across the familiar-looking commands like `init, add, commit, clone, fetch`..but did not quite remember the order they went in or the scenarios in which I would use them. And, then there were the more complicated stuff like `merge, push, origin, master`..A who? *“Patience!!!”* I told myself and took a deep breath and decided to take one step at a time and soon enough I got the grasp of the basic commands. 
+
+Here are a few concepts and commands in git I found myself using very frequently throughout my project and feel like they cover the basics for a newbie.
+ 
+**Getting Started**
+
+With the easy-to-use github interface, I directly created a repository in github, so I skipped `git init` which creates an empty repository in your current directory. Navigating to the "clone or download" button in my repo's page in github, I got the SSH key, which looks something like this:
+
+`git@github.com:kriti-rai/swole-news.git`
+
+Then in the terminal, I typed:
+
+`$ git clone git@github.com:kriti-rai/swole-news.git`
+
+This gave me a complete clone of the repository in my current directory. The copy is isolated from the original repository, the one in github. So, any change that I made in the cloned repo would not be reflected in the original repo unless pushed.
+
+
+**Saving changes**
+
+When you make changes to your file and are ready to commit those changes, you first stage the modified files by typing:
+
+`$ git add <file-name>`
+
+or to stage all modified files, type:
+
+`$ git add .`
+
+If you are unsure what files have been modified, type:
+
+`$ git status`
+
+which will provide you a list of modified and un/staged files, alongside what branch you are on. I caught myself doing this a lot.
+
+Do keep in mind that, when adding files, git is adding the changes and taking a snapshot of the file as is at the moment. So, to add any changes made after staging, you will have to run `git add` again.
+
+Once you are sure that you want to commit your changes, run:
+
+`$ git commit`
+
+This will open an external editor so a commit message can be added. I used this for longer commit messages.
+
+For shorter messages or to directly type a message while commiting, you can also type:
+
+`$ git commit -m "Message goes here."`
+
+For commits that you are sure of and don't think needs staging, you can skip `git add` and just type:
+
+`$ git commit -am "Message goes here".`
+
+I used this a lot for minor changes or the changes I was very sure of.
+
+**Undoing Commits(messages)**
+
+This was a saving grace, as sometimes I would not be paying attention and type a wrong message in the commit, or would want to undo the last commit. So for that, I would type:
+
+`$ git commit --amend -m "My new message"`,
+
+which will replace the last message with the new one. So simple!! 
+
+If you want to go one step back and also unstage the staged files for this commit, you can type:
+
+`$ git reset <file-path>`
+
+You can also make changes to older and multiple commits but that seemed tricky and required more practice and knowledge, and also came with a warning message.
+
+**Branching**
+
+I just want to add this part as I found this feature very useful in experimenting while not messing up the default branch, i.e. *master*. Any time you want to work on fixing a bug or a new feature, it is recommended you do it on a separate branch so that while you work on that, you don't break the working branch, i.e. the *master* branch. Once you get your branch working, you can simply `merge` it to the *master* branch.
+
+To create and switch to a new branch, run:
+
+`$ git checkout -b <branch_name>`
+
+To switch back to master, run:
+
+`$ git checkout master`
+
+To delete a branch, run:
+
+`$ git branch -d <branch_name>`
+
+Keep in mind that a branch is not available to others unless you push the branch to your remote repository. For that, type:
+
+`$ git push origin <branch_name>`
+
+**Pushing the changes**
+
+Now for the final part, say you are done with your work, everything looks beautiful and you want to send those changes to the original repo. Simply type:
+
+`$ git push origin master`
+
+You can change master to any branch that you want to send your changes to. For example, if you have a branch named *feature* and that's where you want your changes to go, you would type:
+
+`$ git push origin feature`
+
+**Conclusion**
+
+All in all, I hope you found my rant useful, or at least empathized with my struggle. Git has tons of other amazing commands and features, but for now I am glad that I've got the basics under my belt and look forward to learning more. It is a very useful tool with practical benefits. Say, you are working on a snazzy project with multiple other developers. Each of the developers takes up on a task and starts making changes and contributing. Would not it be nice to have a way where you can send changes to a central repository from where everyone can access the changes as well as send theirs? And, git does exactly that!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
