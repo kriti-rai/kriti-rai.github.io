@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My First CLI Gem"
-date:       2018-04-15 04:43:46 +0000
+date:       2018-04-15 00:43:47 -0400
 permalink:  my_first_cli_gem
 ---
 
@@ -67,8 +67,12 @@ def self.create_from_collection(article_array)
 ```
 In the method above for Article class, I told each article being instantiated that it also had a list of workouts, that were being instantiated alongside the article and that they belonged (`workout.article = article`) to the article.
 
-**Wrapping it up**
-	
+**Publishing**
+
+Finally, eveything was working as I intended. To wrap it up, I revised my code again to make sure I do not see any anti-patterns or if I could write something in more elegant manner. The final step was publishing my gem, which consisted of two major steps -- building and pushing the gem. I found this [article](http://domckellar.com/2017/01/27/publishing_a_gem/) very useful in doing so as I was coming across a *InvalidURIError* until I realized I needed to modify my gemspec. After multiple attempts and keeping my fingers crossed, my gem finally published and now can be found [here](https://rubygems.org/gems/swole-news).
+
+**Conclusion**
+
 Starting from a clean directory was not easy, coding away without a test suite to check your work was daunting but looking back and seeing how far I have come, I can only conclude that I would rather be here than where I was ~17 days ago. That is when I first opened the lesson. Now I feel more knowledgeable and more confident. Hell, I now know git!!  One thing that really stuck with me after this lesson is that in order to succeed, hard work and persistance are necessary but so is a little bit of courage. Take the plunge and leave your self-doubt and fear behind and work your way through. 
 
 Please make sure to check out my Github [repo](https://github.com/kriti-rai/swole-news.git) and my walkthrough [video](https://www.youtube.com/watch?v=BlPmqdfd7JQ). 
