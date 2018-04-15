@@ -69,7 +69,7 @@ In the method above for Article class, I told each article being instantiated th
 
 **Publishing**
 
-Finally, eveything was working as I intended. To wrap it up, I revised my code again to make sure I do not see any anti-patterns or if I could write something in more elegant manner. The final step was publishing my gem, which consisted of two major steps -- building and pushing the gem. I found this [article](http://domckellar.com/2017/01/27/publishing_a_gem/) very useful in doing so as I was coming across a *InvalidURIError* until I realized I needed to modify my gemspec. After multiple attempts and keeping my fingers crossed, my gem finally published and now can be found [here](https://rubygems.org/gems/swole-news).
+Finally, eveything was working as I intended. To wrap it up, I revised my code again to make sure I did not see any anti-patterns or if I could write something in more elegant manner. The final step was publishing my gem, which consisted of two major steps -- building and pushing the gem. However, I kept coming across *InvalidURIError* error and thanks to this [article](http://domckellar.com/2017/01/27/publishing_a_gem/) I realized that I needed to modify my gemspec. So, after multiple attempts and keeping my fingers crossed, my gem finally published and now can be found [here](https://rubygems.org/gems/swole-news).
 
 **Conclusion**
 
