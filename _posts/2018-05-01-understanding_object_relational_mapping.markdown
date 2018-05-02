@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Understanding Object Relational Mapping"
-date:       2018-05-02 03:12:56 +0000
+title:      "Understanding ORM"
+date:       2018-05-01 23:12:57 -0400
 permalink:  understanding_object_relational_mapping
 ---
 
