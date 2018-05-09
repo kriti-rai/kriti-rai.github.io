@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Being Lazy with Active Record"
-date:       2018-05-09 23:44:10 +0000
+date:       2018-05-09 19:44:11 -0400
 permalink:  being_lazy_with_active_record
 ---
 
@@ -15,7 +15,7 @@ Let's look at some of those said functionalities, starting with creating a class
 class dog < ActiveRecord::Base
 end
 ```
-Here my class inherits from ActiveRecord::Base module. With this inheritance, my model ```Dog``` now is "magically" mapped to its corresponding database table ```dogs``` , if exists, where each column is mapped to the  corresponding attribute of the model. In other words, since my table has four columns, *id*, *name, age* and *gender*, my model gets reader and writer methods for each attribute. For instance, I can instantiate a dog and set its name through ```#name=``` methods and then ask for its name through ```#name``` method.
+Here my class inherits from ActiveRecord::Base module. With this inheritance, my model ```Dog``` now is "magically" mapped to its corresponding database table ```dogs``` , if exists, where each column is mapped to the  corresponding attribute of the model. Let's say my table has four columns --*id*, *name, age* and *gender*. Now, my model would automatically inherit attributes corresponding to each of those columns. Hence, there is no need for me to define ```attr_accessors``` but my module would be aware of the reader and writer methods for each of its attributes. For instance, I can instantiate a dog and set its name through ```#name=``` methods and then ask for its name through ```#name``` method.
 
 ```
 luka = Dog.new
