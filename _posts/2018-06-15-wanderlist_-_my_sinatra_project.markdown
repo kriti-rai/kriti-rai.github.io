@@ -1,13 +1,13 @@
 ---
 layout: post
 title:      "WanderList - My Sinatra Project"
-date:       2018-06-15 04:22:43 +0000
+date:       2018-06-15 00:22:44 -0400
 permalink:  wanderlist_-_my_sinatra_project
 ---
 
 
 
-The idea behind my [second project](https://github.com/kriti-rai/wander-list) is to allow users to create boards where they can pin trips from the list that the app scrapes from [here](http://www.bbc.com/travel/destinations).
+The idea behind my [WanderList](https://github.com/kriti-rai/wander-list) is to allow users (wanderers) to create boards where they can pin trips from the list that the app scrapes from [here](http://www.bbc.com/travel/destinations).
 
 ![homepage](https://i.imgur.com/0V0bz9H.png?3)
 
@@ -18,7 +18,7 @@ I started out by creating a repository in github and then cloned it in my IDE te
 
 **Models**
 
- I had four models for my app -- *User, Trip , Board *and *BoardTrip*. The associations between my models were such that:
+ I had four models for my app -- *User*, *Trip* , *Board* and *BoardTrip*. The associations between my models were such that:
  
  1. A user **has many** boards and **has many** trips **through** boards
  2. A board **belongs to** a user, **has many** board_trips and **has many** trips **through** board_trips 
@@ -45,42 +45,34 @@ I had four controllers for my app each with their own corresponding *erb* files 
 
 **Validations**
 
-I had few validations to prevent bad inputs.
+I had a few validations in place to prevent bad inputs.
 
 1. **User(s) can't sign up unless they fill out all required fields, i.e. username,     
       email and password**
 
-      The above requirement was met by putting the following line of codes in *User*   
-			class:
+      The above requirement was met by putting the following lines of code in *User* class:
 
       ```
       validates :username, :email, :password, presence: true
       validates :username, uniqueness: { case_sensitive: false }
       validates :email, uniqueness: true
       ```
-      The following lines of code in *UserController* raises an error if the above    
+      And, the following lines of code in *UserController* raises an error if the above    
 			validation fails:
 			
      ```	    
      post '/signup do
      ...
-     elsif !!params[:username].empty? || !!params[:email].empty? ||        
-		    !!params[:password].empty?
-        flash[:message] = "All fields are required."
+     elsif !!params[:username].empty? || !!params[:email].empty? || !!params[:password].empty?
+        flash[:message] = @user.errors.full_messages[0]
         redirect to '/signup'
      end
      ```
 2. **Usernames and email addresses are unique** 
 
-     The *uniqueness* part in the validation code above also makes sure that  the        
+     The *uniqueness* part in the validation code in *User* class makes sure that  the        
 		 usernames and email addresses are unique and if not raises an error.
 
-     ```
-     else
-        flash[:message] = @user.errors.full_messages[0]
-        redirect to '/signup'
-     end
-     ```
 
 3. **User(s) cannot create a board without a name**
 
@@ -100,7 +92,6 @@ I had few validations to prevent bad inputs.
 
 **Conclusion**
  
-This project was not as intimidating to start as was my first project. I had the confidence to start with a clean directory and without tests to guide me. I also told myself that I would not take more than a week to finish this and setting up a deadline for myself sort of helped. Drawing out what I wanted my controllers and forms to do helped me visualize how my app should work and therefore helped me write the code accordingly. Overall, the sinatra section of the course was a big chunk to swallow and at times I felt like I was moving too fast without taking a moment to make sure I had retained the material. However, the last few labs and the portfolio project really pushed me to go back and revise and use up online tools to reach my goal. 
-
+This project was not as intimidating to start as was my first project. I had the confidence to start with a clean directory and without tests to guide me. I also told myself that I would not take more than a week to finish this and setting up a deadline sort of helped. Also, drawing out what I wanted my controllers and forms to do helped me visualize how my app should work and therefore helped me write the code accordingly. Overall, the sinatra section of the course was a big chunk to swallow and at times I felt like I was moving too fast without taking a moment to make sure I had retained the material. However, the last few labs and the portfolio project really pushed me to go back and revise and use up online tools to reach my goal. 
 
 Here's the  [link](https://www.youtube.com/watch?v=VMWHzbSXqKQ&t=3s) to my video walkthrough of the app if you'd like to check out.
