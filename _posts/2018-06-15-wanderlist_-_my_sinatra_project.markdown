@@ -7,7 +7,7 @@ permalink:  wanderlist_-_my_sinatra_project
 
 
 
-The idea behind my [WanderList](https://github.com/kriti-rai/wander-list) is to allow users (wanderers) to create boards where they can pin trips from the list that the app scrapes from [here](http://www.bbc.com/travel/destinations).
+The idea behind [WanderList](https://github.com/kriti-rai/wander-list) is to allow users (wanderers) to create boards where they can pin trips from the list that the app scrapes from [here](http://www.bbc.com/travel/destinations).
 
 ![homepage](https://i.imgur.com/0V0bz9H.png?3)
 
