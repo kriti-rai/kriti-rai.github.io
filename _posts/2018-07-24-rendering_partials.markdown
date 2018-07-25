@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Rendering Partials "
+title:      "Refactoring With Partials "
 date:       2018-07-24 23:00:01 -0400
 permalink:  rendering_partials
 ---
