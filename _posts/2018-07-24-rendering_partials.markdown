@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rendering Partials "
-date:       2018-07-25 03:00:00 +0000
+date:       2018-07-24 23:00:01 -0400
 permalink:  rendering_partials
 ---
 
