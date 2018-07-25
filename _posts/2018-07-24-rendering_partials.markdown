@@ -6,7 +6,7 @@ permalink:  rendering_partials
 ---
 
 
-As developers we should always aspire to keep our code DRY, that is assuming that your code works in the first place. Apparently, there is  a code refactoring rule of thumb called [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming) that states that whenever you catch yourself repeating the same lines of code three times, you should be wrapping it up in a method. The same rule is applicable to forms. 
+As developers we should always aspire to keep our code DRY, that is assuming that your code works in the first place. Apparently, there is  a code refactoring rule of thumb called [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)) that states that whenever you catch yourself repeating the same lines of code three times, you should be wrapping it up in a method. The same rule is applicable to forms. 
 
 With every CRUD-based app, especially, we are consistently building forms to *create*, *edit* and *show*. Most of the time *new* and *edit* forms look alike and sometimes you might have a chunk of code in one view file that you want to share in three other view files. How do we do that without repeating the code?
 
