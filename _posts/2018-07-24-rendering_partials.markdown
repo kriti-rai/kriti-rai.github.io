@@ -107,10 +107,10 @@ Simple!
 
 **Rendering Collections**
 
-While dealing with collections, there's an easy way to render partials. Let's look at our author's *index *page that needs to iterate over a collection (i.e. @authors) to show each author's info. We can simply write: 
+While dealing with collections, there's an easy way to render partials. Let's look at our author's *index* page that needs to iterate over a collection (i.e. @authors) to show each author's info. We can simply write: 
 
 ```
-*app/views/authors/index.html.erb*
+#app/views/authors/index.html.erb
 
 <h1>Authors</h1>
 
@@ -124,7 +124,7 @@ This will run the code inside the partial for each item in the collection.
 
 Partials become more powerful when used with local variables which is equivalent of passing arguments in methods. 
 
-Let's work with our *author* partial again, but this time we'll replace `@author` with a local variable named`author`, like this:
+Let's work with our *author* partial again, but this time we'll replace `@author` with a local variable named `author`, like this:
 
 ```
 #app/views/authors/_author.html.erb
@@ -134,10 +134,10 @@ Let's work with our *author* partial again, but this time we'll replace `@author
   <li> author.biography</li>
 </ul>
 ```
-Now, let's render the partial in authors' *index* and show page as we did above, but only now we will be declaring a value for the local variable, namely `author`, in each case.
+Now, let's render the partial in author's *index* and *show* files as we did above, but only now we will be declaring a value for the local variable, namely `author`, in each case.
 
 ```
-*app/views/authors/index.html.erb*
+#app/views/authors/index.html.erb
 
 <h1>Authors</h1>
 
@@ -147,7 +147,7 @@ Now, let's render the partial in authors' *index* and show page as we did above,
 ```
 
 ```
-*app/views/posts/show.html.erb*
+#app/views/posts/show.html.erb
 
 <h1>@post.title</h1>
 
@@ -156,7 +156,7 @@ Now, let's render the partial in authors' *index* and show page as we did above,
 <h6> render partial: 'authors/author', locals: {author: @post.author} %>
 ```
 
-You see what we did here? We are passing in a local variable named  *author* to the partial which points to the value of *a* in the *index* page and *@post.author* in the post's *show* page. By passing in locals, our partial now has become much more flexible. Very cool!
+You see what we did here? We are passing in a local variable named  `author` to the partial which points to the value of `a` in the *index* page and `@post.author` in the post's *show* page. By passing in locals, our partial now has become much more flexible. Very cool!
 
 
 
