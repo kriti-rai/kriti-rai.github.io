@@ -67,6 +67,6 @@ Another really cool gem I found was [simple_hashtag](https://github.com/ralovely
 
 Needless to say, like all past portfolio projects this involved a lot of going back and forth, guessing and testing, adding and deleting code, procrastinating, *binding.pry*, *raise params.inspect*, and a lot of googling. To be honest, though, I am starting to enjoy the process. And, since I can't stop raving about Google, one more thing I want to mention here is that -- *"No matter what problem you have, someone has probably solved it. Find that person/solution* (not sure who said it, google it!).
 
-![demo](http://icodeyounot.com/rails_project_-_outfits_on_the_go)
+[demo](https://www.youtube.com/watch?v=oGe6OHePVyc&t=1s)
 
 
