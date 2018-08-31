@@ -6,7 +6,7 @@ permalink:  rails_project_-_outfits_on_the_go
 ---
 
 
-For this project, I decided to build something similar to my Sinatra project but of course with some Rails "magic" and the help of few awesome gems. The app is called [Outfits On The Go]('https://github.com/kriti-rai/outfits-on-the-go'), with the idea being that a user can log in and create an event-specific board, say *"The Bahamas Trip"* and post images of outfits they have put together or plan to wear for that occasion. 
+For this project, I decided to build something similar to my Sinatra project but of course with some Rails "magic" and the help of few awesome gems. The app is called [Outfits On The Go](https://github.com/kriti-rai/outfits-on-the-go), with the idea being that a user can log in and create an event-specific board, say *"The Bahamas Trip"* and post images of outfits they have put together or plan to wear for that occasion. 
 
 I started out with this line of code: 
 
