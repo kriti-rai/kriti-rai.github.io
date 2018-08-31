@@ -92,7 +92,7 @@ The second argument, i.e. *deleteCount*, is the number of items to be removed at
 
 Any number of arguments after the second argument represents the new elements to be added.
 
-Working with our previous array which is currently `["a", "e", "o", "u"]`, let's start at position 1, and add 'i' without removing anything from the position.
+Working with our previous array which is currently `["a", "e", "o", "u"]`, let's start at position 2, and add 'i' without removing anything from the position.
 
 ```
 > arr 
@@ -100,7 +100,7 @@ Working with our previous array which is currently `["a", "e", "o", "u"]`, let's
 > arr.splice(2, 0, 'i')
 // =>[]    // => Empty because the second arg states nothing was removed
 > arr
-// => ["a", "e", "i",  "o", "u"]   // 'i', the third arg, was added at position 1
+// => ["a", "e", "i",  "o", "u"]   // 'i', the third arg, was added at position 2
 ```
 
 Let's pick a position to start our splicing, remove 1 item starting from that position, and add two new elements, *"hello", "world"*, to it.
