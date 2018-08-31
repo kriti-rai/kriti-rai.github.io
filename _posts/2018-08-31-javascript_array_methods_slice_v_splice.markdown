@@ -28,7 +28,7 @@ Now, things start getting interesting. When you provide `slice()` with an argume
 
 *Note: the pizza being returned is the modified version of the clone of the original. So, the original pizza remains untouched, i.e. it still has all 6 slices intact.*
 
-## 3. slice(begin,end)
+## 3. SLICE(begin,end)
 
 Now let's spice things up tad bit more. What if you want to begin slicing at an index and want to stop at another, which is not the last index? You can then provide a second argument, i.e. to tell `slice` when to stop. Check out the image of our pizza below, when we call `slice(2,5)`:
 
