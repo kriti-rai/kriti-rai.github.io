@@ -68,15 +68,19 @@ class Person extends React.Component {
  render () {
   return (
    <p>
-    Hi, my name is {this.props.name}. I am {this.props.age} years old and from  {this.props.hometown}
+    Hi, my name is {this.props.name}. I am {this.props.age} years old and from  {this.props.hometown}.
    </p>
   )
  }
 }
 ```
-So, now appending our `element` to the DOM would result in ``<p>Hi, my name is Crusoe. I am 32 years old and from Highgate.</p>`.
+So, now appending our `element` to the DOM would result in 
 
-We can also call component(s) inside another component. For example, let's say we have an `App` component on the top of the view hierarchy of our application as it typically is. We can call  `Person` inside `App` as so:
+```
+<p>Hi, my name is Crusoe. I am 32 years old and from Highgate.</p>
+```
+
+We can also call component(s) inside another component. For example, let's say we have an `App` component on the top of the view hierarchy of our application as it typically is. We can call  `Person` inside `App` like this:
 
 ```
 class App extends React.Component {
@@ -115,37 +119,36 @@ However, (*uh oh!*) what happens when no argument is provided and/or the propert
 <Person name="Crusoe" age="32"/>
 ```
 
-This would render `<p>Hi, my name is  Crusoe. I am 32 years old and from .` And, we don't want that. We want to be prepared for scenarious when data is missing or undefined.
+This would render 
+```
+<p>Hi, my name is  Crusoe. I am 32 years old and from .
+```
+And, we don't want that. We want to be prepared for scenarious when data is missing or undefined.
 
 ### *Enter default props!!!*
 
-We add `defaultProps` property to the component so that whenever a *prop* is missing or undefined, the component uses the default value provided in `defaultProps` instead. For example, to fix the issue above we can do this:
+We add `defaultProps` property to the component so that whenever the value of a *prop* is missing or undefined, the component uses the default value provided in `defaultProps` instead. For example, to fix the issue above we can do this:
 
 ```
-class Person extends Component {
-  render() {
-    return (
-         <p>Hi, my name is {this.props.name}. I am {this.props.age} years old and from {this.props.hometown}.</p>
-    );
-  }
-}
-
 Person.defaultProps = {
   hometown: 'XYZ'
 }
 
 ```
 
-This would result in `<p>Hi, my name is  Crusoe. I am 32 years old and from XYZ .`
+This would result in 
+```
+<p>Hi, my name is  Crusoe. I am 32 years old and from XYZ. 
+```
 
 ## Conclusion
 
-React components are basically JavaScript functions and can be defined using ES6 class. They contain:
+React components are basically JavaScript functions and can also be defined using ES6 class. They contain:
 * props, *short for properties*
 * data
 * state (*not discussed here*)
 * markup (*delivered by `render()`*)
 
-What make components  powerful and dynamic is their reusability and their ability to take in user-defined arguments. However, in case an argument is missing or not defined, the resulting element might look funky. In order to prevent scenarios such as that, it's best practice to define`defaultProps` setting default value(s) for the component's *prop(s)*. should be used. 
+Components are  powerful and dynamic given their reusability and their ability to take in user-defined arguments. However, in case an argument is missing or not defined, the resulting element might look funky. In order to prevent such scenarios, it's a good practice to define`defaultProps`, setting default value(s) for the component's *prop(s)*.
 
 
