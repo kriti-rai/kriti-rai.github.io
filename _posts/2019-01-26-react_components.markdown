@@ -86,7 +86,7 @@ We can also call component(s) inside another component. For example, let's say w
 class App extends React.Component {
  render () {
   return (
-	 <div>
+   <div>
       <Person name="Crusoe" age="32" hometown="Highgate"/>
       <Person name="Tom" age="26 hometown="Bronx"/>
       <Person name="Ella" age="25" hometown="Minneapolis"/>
@@ -133,7 +133,6 @@ We add `defaultProps` property to the component so that whenever the value of a 
 Person.defaultProps = {
   hometown: 'XYZ'
 }
-
 ```
 
 This would result in 
