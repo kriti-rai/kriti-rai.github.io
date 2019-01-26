@@ -1,11 +1,11 @@
 ---
 layout: post
 title:      "React Components"
-date:       2019-01-26 05:55:37 +0000
+date:       2019-01-26 00:55:38 -0500
 permalink:  react_components
 ---
 
-![](https://i.imgur.com/d5dUPiV.png?1)
+![](https://i.imgur.com/bELISBK.png)
 
 React components are like JavaScript functions. They accept arbitrary inputs called *props*, short for properties, and return something that looks similar to HTML element.
 
