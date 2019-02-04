@@ -16,7 +16,7 @@ If you have a static app, **don't use state**. However, if you want your app to 
 
 ## **Action!**
 
-Let's look at an example to see *state* works.
+Let's look at an example to see how *state* works.
 
 We will build a  simple `Countdown` component that renders the final countdown to the New Year's day. Keep in mind,
 
@@ -31,7 +31,7 @@ import ReactDOM from 'react-dom';
 export default class Countdown extends React.Component {
    
  timer () {
- // some callback function that updates the  countdown every second
+ // some function that updates the  countdown every second
  }
 	 
  render () {
