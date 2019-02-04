@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "What is State in React?"
-date:       2019-02-04 21:23:51 +0000
+date:       2019-02-04 16:23:52 -0500
 permalink:  what_is_state_in_react
 ---
 
