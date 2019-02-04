@@ -8,13 +8,13 @@ permalink:  what_is_state_in_react
 
 In English, ***state*** refers to "the particular condition that someone or something is in at a specific time" and that holds true for state in React Component as well. Each component can maintain its own state, which can be accessed through `this.state`. 
 
-## Why use state?
+## **Why use state?**
 
 If you have a static app, **don't use state**. However, if you want your app to be interactive, like for example a clock widget that shows and updates time at a set interval or an app where one can log in and out, add, delete and update resources - it will involve state. In other words, state allows components to incapsulate and modify information and keep track of the changes. 
 
 **But, wait a minute don't we use props to store data in components?** Yes, but the crucial difference here is that *props* are immutable in that the components can not change their props as they are passed down from a parent component. In contrast, component has a full control over its state and can change it as needed. 
 
-## Action!
+## **Action!**
 
 Let's look at an example to see *state* works.
 
@@ -120,11 +120,12 @@ ReactDOM.render(el, document.getElementById('root'));
 
 ![](https://media.giphy.com/media/u0ag71wII1yBjMAOAc/giphy.gif)
 
-## *TL;DR*
+## ***TL;DR***
 * If you want interactive components use state
 * React maintains state as an object which can be accessed through `this.state`
 * State is similar to props, but is private and fully controlled by the component and can not be accessed and modified outside the component (*think encapsulation*)
 * Don't set the state directly like `this.state = someValue` but use `setState()` instead
+
 
 ### Resources:
 
