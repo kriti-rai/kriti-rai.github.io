@@ -16,7 +16,7 @@ If you have a static app, **don't use state**. However, if you want your app to 
 
 ## Action!
 
-Let's look at an example to see how *state* in action.
+Let's look at an example to see *state* works.
 
 We will build a  simple `Countdown` component that renders the final countdown to the New Year's day. Keep in mind,
 
@@ -55,12 +55,12 @@ constructor() {
 ```
 Note that we are hardcoding the value for the initial state but we can also pass in *props* as an argument to the constructor function if we are going to use it to set the initial state.
 
-Now, let's implement the `timer()` function that the `Countdown` component calls every second till the `this.state.secondsLeft` is 0. It uses `this.setState()` to update the component's local state. 
+Now, let's work on our `timer()` function that updates our component's state of `secondsLeft` until it hits 0. We use `this.setState()` to update a component's local state rather than directly setting the state to some value. This way React knows that there has been an update and re-renders the component.
 	
 ```
 timer = () => {
  if (this.state.secondsLeft > 0) {
-  this.setState({ secondsLeft: this.state.secondsLeft -1 })
+  this.setState({ secondsLeft: this.state.secondsLeft - 1 })
  }
 }
 ```
@@ -92,7 +92,7 @@ export default class Countdown extends React.Component {
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
+    setInterval(
       () => this.timer(),
       1000
     );
@@ -116,7 +116,7 @@ ReactDOM.render(el, document.getElementById('root'));
 
 ```
 
-And, let's see it in action below- tadah!!!
+...and, let's see it in action - tadah!!!
 
 ![](https://media.giphy.com/media/u0ag71wII1yBjMAOAc/giphy.gif)
 
@@ -124,4 +124,11 @@ And, let's see it in action below- tadah!!!
 * If you want interactive components use state
 * React maintains state as an object which can be accessed through `this.state`
 * State is similar to props, but is private and fully controlled by the component and can not be accessed and modified outside the component (*think encapsulation*)
-* Don't set the state directly like `this.state = someValue` but use `setState()` instead so React knows that the state has been updated and re-renders the component accordingly 
+* Don't set the state directly like `this.state = someValue` but use `setState()` instead
+
+### Resources:
+
+* [Props and State](https://github.com/uberVU/react-guide/blob/master/props-vs-state.md)
+* [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+* [Components and Props](https://reactjs.org/docs/components-and-props.html)
+* [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
