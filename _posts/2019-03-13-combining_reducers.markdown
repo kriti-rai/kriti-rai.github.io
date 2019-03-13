@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Combining Reducers"
-date:       2019-03-13 22:52:11 +0000
+date:       2019-03-13 18:52:11 -0400
 permalink:  combining_reducers
 ---
 
