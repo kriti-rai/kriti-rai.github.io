@@ -78,7 +78,7 @@ However, as Dan Abramov points out in this [article](https://medium.com/@dan_abr
 
 ### Reducers
 
-Speaking of separation of concerns, instead of having one giant reducer, I decided to have one reducer managing only one independent slice of the state.  So, I ended up with three reducers, `alertsReducer`, `hikesReducer` and `userReducer`. All of them are then combined in the `rootReducer`, using `combineReducers` helper function provided by `redux`, which combines all the reducer functions into a single reducer that is passed to `createStore`. 
+Speaking of separation of concerns, instead of having one giant reducer, I decided to have one reducer managing only one independent slice of the state.  So, I ended up with three reducers, `alertsReducer`, `hikesReducer` and `userReducer`. All of these reducing functions are then combined into a single reducer, `rootReducer`, using `combineReducers` helper function provided by `redux`. This reducer is what gets passed to `createStore`. 
 # Conclusion
 
 I had a lot of fun building this application. And, like with all other projects, this one came with frustration but I've learned that that's what makes the accomplishment at the end so much sweeter. However, this is not a full accomplishment as I still would like to work on the app, adding some  more features like comments, users being able to rate and create hikes and so on. For all I know, sky is the limit and there is always room for improvement. As of now, I'm happy that I'm ready for my final assessment. The journey has just begun! 
