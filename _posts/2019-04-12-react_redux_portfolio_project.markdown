@@ -6,21 +6,23 @@ permalink:  react_redux_portfolio_project
 ---
 
 
+![Trailista](https://i.imgur.com/fla25b0.jpg)
+
 Finally, the day has come!! I'm getting ready to submit my final project for assessment and phew! what a journey it has been -- the whole program and the project like all other ones. So, let's talk about my final project. For this assignment, I built an app called ***[Trailista](https://github.com/kriti-rai/trailista)***, which pulls a list of trails from [The Hiking Project Data API](https://www.hikingproject.com/data) by location. 
 
 It's definitely a WIP but so far here are the available featues:
 
 * ####  One can search for trails by city and country
 
-  ![search](https://media.giphy.com/media/VGhqaaqcnNNfghL4P3/giphy.gif)
+  ![search](https://media.giphy.com/media/lrbwszQmty9ybUdBQs/giphy.gif)
 
 * #### One can login or sign up
 
-  ![registration](https://media.giphy.com/media/IdgJsLzXBbQza0nbdW/giphy.gif)
+  ![registration](https://media.giphy.com/media/j0verhIyrSczORIdK0/giphy.gif)
 		
 * #### One can add trails to their favorites list and then delete them as they wish
 
-     ![favorites](https://media.giphy.com/media/XcRAxM6W0AM2h3mOXb/giphy.gif)
+     ![favorites](https://media.giphy.com/media/mDXrTRqf6EMfTAyNat/giphy.gif)
 	 
 ## The way it works
 
@@ -61,7 +63,7 @@ getCoordinates= (e) => {
 }
 ```
 
-*Disclaimer: I am aware that this is not a requirement for the project but I felt like without the location feature my app would be very dull and I wanted to make it interesting or at least do something besides the simple login/logout and CRUD stuff.*
+*Disclaimer: I am aware that this is not a requirement for the project to be this complicated but I felt like without the location feature my app would be very dull and I wanted to make it interesting or at least do something besides the simple login/logout and CRUD stuff.*
 
 ## The Set Up
 
@@ -82,4 +84,6 @@ Speaking of separation of concerns, instead of having one giant reducer, I decid
 # Conclusion
 
 I had a lot of fun building this application. And, like with all other projects, this one came with frustration but I've learned that that's what makes the accomplishment at the end so much sweeter. However, this is not a full accomplishment as I still would like to work on the app, adding some  more features like comments, users being able to rate and create hikes and so on. For all I know, sky is the limit and there is always room for improvement. As of now, I'm happy that I'm ready for my final assessment. The journey has just begun! 
+
+
 
