@@ -6,6 +6,8 @@ permalink:  media_queries_for_responsive_apps
 ---
 
 
+![](https://i.imgur.com/MCsEzZB.png?1)
+
 For our school projects we are not quite concerned about making our apps look pretty but rather meeting the requirements and hitting the core concepts. Eventually you would and should want to deploy one or all of your apps to showcase your work. That is when  you might want to work on the way your app looks as this could be one such case where looks matter. So, I decided to work on deploying [my app](https://github.com/kriti-rai/trailista)  that I built for the final project at Flatiron School - the first stop being its responsiveness.
 
 With the increasing variety of devices we use nowadays to access contents on the web, it makes sense to architect our app's design to adjust to varying media types, screen/viewport sizes and such, providing a good user-experience that we as developers strive for. I used Chrome's [Responsive Web Design Tester Tool](https://developers.google.com/web/tools/chrome-devtools/device-mode/) to simulate different viewport dimensions of devices such as iPhone 5/SE, iPad and laptops, to get the idea of how my app looks on different screen sizes. However, everytime I switched between viewports other than a laptop's, I cringed at the way my app looked. For instance, on iPhone 5's viewport, my *search form*  that otherwise so nicely stretched across the page now broke into two rows with the input boxes unattractively stacked on top of each other. The letters in the *navbar* were gigantic in proportion to the viewport size, and my app just did not look neat and finished anymore. So, I decided to turn to media queries.
