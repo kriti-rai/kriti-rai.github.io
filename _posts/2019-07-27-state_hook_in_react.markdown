@@ -84,7 +84,7 @@ function Like() {
 
 First, we imported `useState` from React. Then, we converted our class component to a function component `Like()`. Finally, inside the function we have this one liner:
 ```const [likes, setLikes] = useState(0);```
-`useState` returns a pair of values -- the current state and a function that updates it. So, with the  [array destructuring method](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean) we are declaring and assigning values to a state variable `likes` and a function `setLikes`, which is similar to `setState()` method in a `class`.  You can also see that `useState()` takes in one argument which is the initial state of the component and that'd be  `0` in this case as we haven't got likes from anyone yet :( 
+`useState` returns a pair of values -- the current state and a function that updates it. So, with the  [array destructuring method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) we are declaring and assigning values to a state variable `likes` and a function `setLikes`, which is similar to `setState()` method in a `class`.  You can also see that `useState()` takes in one argument which is the initial state of the component and that'd be  `0` in this case as we haven't got likes from anyone yet :( 
 
 ## Updating State
 
