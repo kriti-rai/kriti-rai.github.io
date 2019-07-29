@@ -9,7 +9,7 @@ For some time we had been referring to function components as *stateless* compon
 
 As per [React.js docs](https://reactjs.org/docs/hooks-state.html), 
 
-> `State Hooks are basically functions that let you ‘hook into’ React state and lifecycle features from function components`
+> State Hooks are basically functions that let you ‘hook into’ React state and lifecycle features from function components
 
 Let’s see how we can rewrite a class component using the state hook. Let's say we have a `Like` component that renders the number of total likes as well as a like button and an unlike button. When  a user clicks on the like button the likes go up by 1 and conversely, when a user clicks on the unlike button the likes go down by 1. 
 
@@ -41,10 +41,9 @@ class Like extends Component {
     return (
       <div>
         <h4>Likes: { this.state.likes }</h4>
-        <button style={{ backgroundColor: '#99ccff' }} onClick={ this.handleLike }> Like </button>
-        <button style={{ backgroundColor: 'red' }} onClick={ this.handleUnlike }> Unlike </button>
+        <button style={{backgroundColor: '#99ccff'}} onClick={ this.handleLike }> Like </button>
+        <button style={{backgroundColor: 'red'}} onClick={ this.handleUnlike }> Unlike </button>
       </div>
-
     )
   }
 }
@@ -126,8 +125,8 @@ function Like() {
   return (
     <div>
       <h4>Likes: { likes }</h4>
-      <button style={{ backgroundColor: '#99ccff' }} onClick={ handleUpClick }> Like </button>
-      <button style={{ backgroundColor: 'red' }} onClick={ handleDownClick }> Unlike </button>
+      <button style={{backgroundColor: '#99ccff'}} onClick={ handleUpClick }> Like </button>
+      <button style={{backgroundColor: 'red'}} onClick={ handleDownClick }> Unlike </button>
     </div>
   )
 }
