@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "The Big O Notation"
-date:       2019-08-05 20:17:32 +0000
+date:       2019-08-05 16:17:33 -0400
 permalink:  the_big_o_notation
 ---
 
@@ -23,7 +23,7 @@ const linearSearch = (array, n) => {
 
 ...and you are done or are you?
 
-Well, in the best-case scenario where the given array has merely one element, you might be. The function would run once and return `true` or `false` depending on whether the condition is met or not. It's still not too bad if the given array equals to, say, `[2, 1, 4, 5]` and the *n* we are looking for is e.g. 1. The function just needs two iterations and then exits out returning `true` for the second element is equal to *n*. 
+Well, you might be in the best-case scenario where the given array is small enough and the function executes swiftly.
 
 But life ain't always that easy!
 
