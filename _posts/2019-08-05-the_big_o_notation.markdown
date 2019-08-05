@@ -27,7 +27,7 @@ Well, you might be in the best-case scenario where the given array is small enou
 
 But life ain't always that easy!
 
-What if the given array is huge? And, say, *n* is not equal to the first element in the array but somewhere in the middle or not even there? The linear search function we wrote above still works but what about the execution time to go over each element in the array until it comes across the element we are lookig for? 
+What if the given array is huge? And, say, *n* is not equal to the first element in the array but somewhere in the middle or not even there? The linear search function we wrote above still works but what about the execution time to go over each element in the array until it comes across the element we are looking for? 
 
 ![source:imgur](https://i.imgur.com/nTXnixm.jpg)
 
