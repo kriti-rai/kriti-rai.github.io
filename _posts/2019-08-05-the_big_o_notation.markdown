@@ -51,7 +51,7 @@ Big O notation in Computer Science is used to explain how the runtime or the spa
 ## O(1) - Constant Time Complexity
 
 With constant time complexity, the time taken to execute is constant regardless of the size of the data input. Let's say you have a  file to transfer over from one city to another. Normally, you'd attach the file to an email and send it over or decide to do a FTP transfer. In either case, the bigger the file size, the longer it would take for you to transfer the file over. Hence, the runtime would be linear, i.e. O(N).
-However, let's say you come up with an ingenius idea of transferring your gigantic file to a flash drive and sending it over to the recipient via a pigeon (because mailing is boring) that you trained to do so. Now, think about the relationship between the file size and the transfer time. Would it matter if the file was 1GB or 1TB? Our pigeon friend would still take the same amount of time to fly over and deliver the flash drive. So, here our runtime would be *O(1)*, meaning our algorithm will always execute at the same time regardless of the size of the input data. 
+However, let's say you come up with an ingenious idea of transferring your gigantic file to a flash drive and sending it over to the recipient via a pigeon (because mailing is boring) that you trained to do so. Now, think about the relationship between the file size and the transfer time. Would it matter if the file was 1GB or 1TB? Our pigeon friend would still take the same amount of time to fly over and deliver the flash drive. So, here our runtime would be *O(1)*, meaning our algorithm will always execute at the same time regardless of the size of the input data. 
 
 ![Fig 2](https://i.imgur.com/T52TPgs.jpg)
 
